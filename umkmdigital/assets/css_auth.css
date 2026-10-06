@@ -1,0 +1,39 @@
+
+:root{
+  --brand:#2563eb;
+  --brand-2:#7c3aed;
+  --ink:#0f172a;
+  --muted:#64748b;
+  --line:#e2e8f0;
+}
+*{box-sizing:border-box}
+body{
+  min-height:100vh;margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
+  background:linear-gradient(135deg,#f8fbff 0%,#eef4ff 48%,#f7f3ff 100%);
+  color:var(--ink);
+}
+.auth-page{min-height:100vh;display:grid;place-items:center;padding:28px 16px;position:relative;overflow:hidden}
+.auth-page::before,.auth-page::after{content:"";position:absolute;border-radius:50%;filter:blur(2px);z-index:0}
+.auth-page::before{width:360px;height:360px;background:#dbeafe;top:-170px;left:-130px}
+.auth-page::after{width:320px;height:320px;background:#ede9fe;right:-120px;bottom:-150px}
+.auth-card{
+  width:min(100%,460px);position:relative;z-index:1;
+  background:rgba(255,255,255,.88);backdrop-filter:blur(18px);
+  border:1px solid rgba(255,255,255,.8);border-radius:28px;
+  padding:38px;box-shadow:0 24px 70px rgba(30,41,59,.12)
+}
+.brand-mark{width:72px;height:72px;margin:0 auto 18px;border-radius:20px;display:grid;place-items:center;background:#fff;border:1px solid var(--line);box-shadow:0 10px 30px rgba(37,99,235,.12);overflow:hidden}
+.brand-mark img{width:58px;height:58px;object-fit:contain}
+.auth-title{text-align:center;font-size:30px;font-weight:800;letter-spacing:-.6px;margin:0 0 7px}
+.auth-subtitle{text-align:center;color:var(--muted);margin:0 0 28px;font-size:14px;line-height:1.6}
+.form-label{font-size:13px;font-weight:700;color:#334155;margin-bottom:7px}
+.form-control{height:52px;border-radius:14px;border:1px solid var(--line);background:#fff;padding:0 15px;transition:.2s}
+.form-control:focus{border-color:#93c5fd;box-shadow:0 0 0 4px rgba(37,99,235,.10)}
+.auth-btn{height:52px;border:0;border-radius:14px;width:100%;font-weight:750;color:#fff;background:linear-gradient(135deg,var(--brand),var(--brand-2));box-shadow:0 12px 24px rgba(37,99,235,.20);transition:.2s}
+.auth-btn:hover{transform:translateY(-2px);box-shadow:0 16px 30px rgba(37,99,235,.25)}
+.auth-link{color:var(--brand);font-weight:700;text-decoration:none}
+.auth-link:hover{text-decoration:underline}
+.auth-footer{text-align:center;color:var(--muted);font-size:14px;margin:20px 0 0}
+.alert{border:0;border-radius:14px;font-size:14px}
+@media(max-width:520px){.auth-card{padding:28px 22px;border-radius:22px}.auth-title{font-size:26px}}
